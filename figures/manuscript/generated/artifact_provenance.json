@@ -1,0 +1,9 @@
+{
+  "confirmation_source": "results/confirmation/reference",
+  "fixed_noise_source": "results/strengthening/reference",
+  "extended_source": "results/extended/reference",
+  "figure_2_panel_a": "medians and interquartile ranges recomputed from fixed-noise CSV records",
+  "figure_2_panel_b": "recomputed from paired confirmation CSVs",
+  "noise_zero_row": "diagnostic values assigned in historical implementation",
+  "tables": "S2-S6 generated from included CSV records; zero-noise note belongs in table caption"
+}

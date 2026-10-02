@@ -1,0 +1,9 @@
+{
+  "algorithm_sources_before_repository_packaging": {
+    "experiments/strengthening/sdde_core.py": "0513a8086eb5ab646752ead9842228eb3d04142a0ab4f2f63951a71db35d0d18",
+    "experiments/strengthening/certificate.py": "596d0640a2eb78518ea8c1701cb9072342bce1a6b2940a29510d1d86c927d6a7",
+    "experiments/strengthening/run_tnnls_strengthening.py": "ea5acabaec46b15accf88f113182ea2ac21df50614feffa322122084e7b15725",
+    "experiments/strengthening/run_step5_confirmation.py": "94a6d02fca2ef4eff72b0c907ec09c36ecb38cf3ee2dcc14f10e1ef77a278e3c"
+  },
+  "notes": "Original numerical definitions moved unchanged into numpy_data.py. Runner output paths and metadata/plot labels are updated; training objectives and schedules are retained."
+}

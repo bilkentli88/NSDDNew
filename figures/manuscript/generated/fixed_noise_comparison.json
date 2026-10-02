@@ -1,0 +1,7 @@
+{
+  "paired_runs": 5,
+  "paired_improvements": 4,
+  "ratio_of_marginal_medians": 0.4316717115418129,
+  "median_paired_ratio": 0.5151138174565395,
+  "scope": "initial fixed-noise study; distinct from fresh-noise confirmation"
+}

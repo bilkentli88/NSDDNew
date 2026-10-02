@@ -1,0 +1,15 @@
+\begin{tabular}{lllll}
+\toprule
+ID & Configuration & Runs & Clean trajectory MSE & Delay RMSE \\
+\midrule
+P0 & Oracle-delay restricted & 5 & \(5.525\times10^{-5}\) & \(1.469\times10^{-8}\) \\
+P1 & Profile initialization and anchor & 5 & \(8.624\times10^{-5}\) & \(1.593\times10^{-2}\) \\
+P2 & Profile initialization only & 5 & \(1.108\times10^{-4}\) & \(3.335\times10^{-2}\) \\
+P3 & Anchor only & 5 & \(6.789\times10^{-5}\) & \(1.313\times10^{-2}\) \\
+P4 & Restricted rollout only & 5 & \(9.737\times10^{-5}\) & \(3.041\times10^{-2}\) \\
+P5 & Unrestricted, learned delay & 5 & \(1.059\times10^{-5}\) & \(3.194\times10^{-2}\) \\
+P6 & Unrestricted, fixed delay 0.46 & 3 & \(5.453\times10^{-5}\) & \(1.646\times10^{-1}\) \\
+D1 & Restricted, learned delay, ramps & 5 & \(9.589\times10^{-5}\) & \(1.193\times10^{-1}\) \\
+D2 & Restricted, fixed delay, ramps & 1 & \(1.157\times10^{-4}\) & \(1.646\times10^{-1}\) \\
+\bottomrule
+\end{tabular}
