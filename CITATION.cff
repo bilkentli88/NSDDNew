@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript; update these metadata when publication details are available."
+title: "Matched-State Identifiability and Certification of Learned State-Dependent Delays in Neural Delay Differential Equations"
+type: software
+authors:
+  - family-names: "Anonymous Authors"
+license: MIT

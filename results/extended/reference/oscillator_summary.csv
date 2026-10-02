@@ -1,0 +1,4 @@
+model,architecture,observation,training_loss,test_full_state_mse,test_x1_mse,test_x2_mse,delay_rmse,delay_mean,anchor_mae,mechanistic_verdict
+full_observation,"restricted vector a(x)+b(x)z, learned tau",full state,3.2092244509840384e-05,3.7976137424527145e-05,5.5094573801003787e-05,2.08577010480505e-05,0.027840644270941718,0.24562907218933105,0.013728725326057421,supported
+partial_x1_only,"restricted vector a(x)+b(x)z, learned tau",x1 only after t=0,2.23610350076342e-05,0.010718591764949043,2.3377500068143737e-05,0.021413806029829945,0.10466491811488762,0.25995662808418274,0.11733971529861568,weakened under partial observation
+unrestricted_fixed_delay_0.38,"unrestricted vector f(x,z), fixed tau",full state,1.2380943189782556e-05,1.6037572536597222e-05,2.1281640952797817e-05,1.0793504120396625e-05,0.14422800945724829,0.3800000250339508,,abstain: unrestricted compensation

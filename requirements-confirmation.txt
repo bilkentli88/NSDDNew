@@ -1,0 +1,5 @@
+# Versions explicitly recorded by the recovered full-confirmation manifest.
+# SciPy/pandas/Matplotlib versions were not recorded in that manifest.
+-r requirements-analysis.txt
+numpy==2.4.2
+torch==2.10.0

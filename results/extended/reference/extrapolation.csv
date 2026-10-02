@@ -1,0 +1,3 @@
+region,trajectory_mse,delay_rmse,state_min,state_max,certificate_support
+interpolation,8.365070791242108e-06,0.008711693587081569,-0.5,0.5,available on matched-state probes
+extrapolation,0.001957352736890237,0.006794689141604636,-1.25,1.25,absent; abstain outside visited domain

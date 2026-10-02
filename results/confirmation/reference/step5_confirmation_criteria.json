@@ -1,0 +1,25 @@
+{
+  "mode": "full confirmation",
+  "primary_comparison": "P3_vs_P4",
+  "predeclared_thresholds": {
+    "maximum_delay_ratio_of_medians": 0.5,
+    "minimum_paired_improvements": 12,
+    "maximum_trajectory_mse_ratio_of_medians": 2.0,
+    "minimum_candidate_acceptance_rate": 0.7,
+    "maximum_conditional_false_confidence_rate": 0.05
+  },
+  "observed": {
+    "first_config": "P3",
+    "second_config": "P4",
+    "n_pairs": 15,
+    "paired_delay_improvements": 15,
+    "delay_ratio_of_medians": 0.28336901271836556,
+    "median_paired_delay_ratio": 0.33166627907669094,
+    "clean_test_mse_ratio_of_medians": 0.5944533432881497,
+    "median_paired_clean_test_mse_ratio": 0.6624854911742191,
+    "P3_candidate_acceptance_rate": 0.7746031746031746,
+    "P3_conditional_false_confidence_rate": 0.0
+  },
+  "passes_predeclared_confirmation": true,
+  "interpretation": "P3 is the profile-anchor objective without profile pretraining. P4 is the architecture-matched rollout-only reference."
+}

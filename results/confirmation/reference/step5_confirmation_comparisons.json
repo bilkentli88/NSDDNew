@@ -1,0 +1,32 @@
+{
+  "P3_vs_P4_primary": {
+    "first_config": "P3",
+    "second_config": "P4",
+    "n_pairs": 15,
+    "paired_delay_improvements": 15,
+    "delay_ratio_of_medians": 0.28336901271836556,
+    "median_paired_delay_ratio": 0.33166627907669094,
+    "clean_test_mse_ratio_of_medians": 0.5944533432881497,
+    "median_paired_clean_test_mse_ratio": 0.6624854911742191
+  },
+  "P1_vs_P3_pretraining_effect": {
+    "first_config": "P1",
+    "second_config": "P3",
+    "n_pairs": 15,
+    "paired_delay_improvements": 1,
+    "delay_ratio_of_medians": 1.2785229134279714,
+    "median_paired_delay_ratio": 1.1550190057461254,
+    "clean_test_mse_ratio_of_medians": 1.0215872596341253,
+    "median_paired_clean_test_mse_ratio": 1.0639521042356135
+  },
+  "P2_vs_P4_pretraining_only_effect": {
+    "first_config": "P2",
+    "second_config": "P4",
+    "n_pairs": 15,
+    "paired_delay_improvements": 8,
+    "delay_ratio_of_medians": 0.9422343308852944,
+    "median_paired_delay_ratio": 0.9807817827003681,
+    "clean_test_mse_ratio_of_medians": 1.1100689766169451,
+    "median_paired_clean_test_mse_ratio": 1.0812733430194013
+  }
+}
