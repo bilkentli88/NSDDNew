@@ -23,7 +23,7 @@ def commands(mode, stages):
                 command.append("--full")
         elif stage == "extended":
             command = [sys.executable, "experiments/run_extended_experiments.py", "--mode",
-                       "manuscript" if mode == "paper" else "paper"]
+                       "paper"]
         else:
             command = [sys.executable, "experiments/run_principal_scalar.py", "--mode",
                        "paper" if mode == "paper" else "smoke"]

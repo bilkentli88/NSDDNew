@@ -32,6 +32,11 @@ Probe response estimates instead use cubic smoothing splines over ten samples
 including t=0. Resampling includes the initial fitting sample; it does not keep
 that sample constrained to its known exact value.
 
+Profile initialization uses Adam at learning rate 4e-3. Scalar rollout training
+uses Adam at 2e-3 with weight decay 1e-6 and gradient-norm clipping at 5.
+The principal informative-history study uses 90 epochs at a 10-step horizon
+and 190 epochs at a 20-step horizon; the ramp controls use 70 and 150 epochs.
+
 ## Confirmation
 
 Five independent training-noise realizations have data seeds 20260901-20260905.
@@ -48,6 +53,12 @@ acceptance; this denominator differs from an unconditional rate over all states.
 
 ## Noise sweep and numerical resolution
 
+The archived noise sweep uses 180 delay-pretraining iterations, followed by
+35 epochs at a 10-step horizon and 70 epochs at a 20-step horizon. The
+original WP9 README confirms this execution configuration. The extended
+driver's `--mode paper` selects it; its legacy `--mode manuscript` option
+selects an alternative longer schedule.
+
 Two training runs per noise level also have different noise seeds. At positive
 noise levels the first run alone supplies the three-state, 12-resample profile
 diagnostic. Its counts are resolved probe states, not accepted trained candidates.
@@ -58,6 +69,13 @@ noise magnitude using a common random realization.
 Solver refinement uses one frozen model/history. Learned delays do not change
 with the rollout step in that check. Numerical effects on learned delay recovery
 or the anchor advantage require retraining at multiple resolutions.
+
+State-domain trajectory MSE uses 15 trajectories initialized at interior
+states or 20 trajectories initialized at exterior states. Delay RMSE is
+computed separately on 181 uniformly spaced states in [-0.50, 0.50] or
+[-1.25, 1.25]. The wider delay grid includes interior states, so its RMSE
+does not isolate outside-domain delay error. Exterior predictions remain
+outside the assessed mechanistic support.
 
 ## Original fixed-noise study
 

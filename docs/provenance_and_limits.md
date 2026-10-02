@@ -24,13 +24,19 @@ of the five initial fixed-noise pairs, rather than five. Its marginal median
 ratio remains 0.432. Fresh-noise confirmation still improves all 15 pairs.
 Exact manuscript replacements are given in manuscript_corrections.md.
 
-The legacy extended outputs lack a full execution-mode/environment manifest.
-Their individual noise-sweep records reproduce the means and sample SD in the
-revised Table S6. Exact training schedules cannot be inferred from those records.
-The original extended `paper` option runs shorter schedules (180 pretraining
-iterations; 35/70 rollout epochs). This revision retains that historical option
-and adds `manuscript` for the declared noise-sweep schedule (260; 45/90), with
-the short oscillator configuration. `extended` uses longer schedules throughout.
+The original WP9 README explicitly identifies `--quick` as the configuration
+used for its included results. A verbatim copy is retained in
+`docs/archive/WP9_README.txt`. In the original script, this configuration uses
+180 delay-pretraining iterations and 35/70 rollout epochs. The archived
+`noise_scaling.csv` and `noise_scaling_runs.csv` are byte-identical to the
+corresponding original WP9 files, and reproduce the means and sample SD in
+Table S6.
+
+The revised extended driver's `--mode paper` selects that short configuration,
+and the top-level article reproduction command now routes to it. The legacy
+`manuscript` option retains the longer noise sweep (260; 45/90) for
+compatibility, with the short oscillator configuration; it is not the archived
+article schedule. `extended` uses longer schedules throughout.
 
 The revised extended driver seeds scalar and oscillator models before construction. The
 original initialized these models before setting their training seeds. This fix makes

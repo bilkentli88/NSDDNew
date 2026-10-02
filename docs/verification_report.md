@@ -8,6 +8,8 @@
 - Four numerical tests passed. The legacy neural-model test module was skipped
   because PyTorch was unavailable.
 - The full-training command routing was checked with `--mode paper --dry-run`.
+  The extended stage selects `--mode paper`, matching the archived 180/35/70
+  noise-sweep schedule confirmed by the original WP9 README.
 - All 12 NumPy-only function definitions match the recovered scalar core by
   abstract-syntax-tree comparison.
 - All 74 copied confirmation files (CSV/JSON, checkpoints and diagnostic PNGs)
@@ -77,10 +79,13 @@ inspected. New initialization seeding in the extended runner is documented and
 can change newly trained results.
 
 The missing fixed-noise record gap is closed by the newly recovered archive.
-The older noise-sweep archive still does not record its execution mode.
+The original WP9 README identifies its validated `--quick` configuration as
+the source of the included results. The two archived noise-sweep CSVs match
+that package byte for byte. Article reproduction now selects the matching
+180-pretraining, 35/70-rollout-epoch schedule through the extended driver's
+`--mode paper` option.
 
 Generated LaTeX files are table fragments requiring `booktabs`; the complete
 manuscript was not compiled as part of this repository task. Successful
 empirical reconstruction does not validate a deterministic uniform error
 envelope or statistical coverage.
-

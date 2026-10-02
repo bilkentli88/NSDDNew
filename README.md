@@ -28,7 +28,8 @@ Figure 2 panels can be rebuilt from the included records. Verification found
 one manuscript correction: P3 improves over P4 in 4/5 initial fixed-noise
 pairs; the fresh-noise result remains 15/15. See
 [manuscript correction](docs/manuscript_corrections.md).
-The older noise-sweep records still lack an execution-mode manifest; see
+The original WP9 execution note confirms the archived noise-sweep schedule:
+180 delay-pretraining iterations and 35/70 rollout epochs. See
 [provenance and limits](docs/provenance_and_limits.md).
 
 ## Install
@@ -93,7 +94,7 @@ A reduced workflow check:
 python scripts/reproduce_all.py --mode quick
 ```
 
-Full strengthening and confirmation schedules, plus the declared manuscript
+Full strengthening and confirmation schedules, plus the archived article's
 noise-sweep schedule:
 
 ```bash
@@ -112,16 +113,21 @@ Equivalent individual commands:
 ```bash
 python experiments/strengthening/run_tnnls_strengthening.py --full
 python experiments/strengthening/run_step5_confirmation.py --full
-python experiments/run_extended_experiments.py --mode manuscript
+python experiments/run_extended_experiments.py --mode paper
 ```
 
-The extended driver's historical `--mode paper` uses shorter noise-sweep
-schedules. Its new `--mode manuscript` uses 260 pretraining iterations and
-45/90 rollout epochs; `--mode extended` also lengthens the oscillator study.
-The recovered noise-sweep CSVs do not identify which historical mode produced
-them. New runs seed models before construction and record their own execution
+The extended driver's `--mode paper` matches the configuration identified by
+the original WP9 README: 180 pretraining iterations and 35/70 rollout epochs.
+The same archived configuration uses the short oscillator study. The legacy
+`--mode manuscript` option is retained for compatibility and uses a longer
+noise sweep (260 pretraining iterations and 45/90 rollout epochs); it is not
+the configuration used for the archived article results. `--mode extended`
+also lengthens the oscillator study. The original execution note is included
+in [docs/archive/WP9_README.txt](docs/archive/WP9_README.txt).
+
+New runs seed models before construction and record their own execution
 settings, so they must be reported as new results rather than assumed to
-duplicate the archives.
+duplicate the archived metrics exactly.
 
 The legacy `experiments/run_principal_scalar.py` remains available because
 the extended driver imports its model and solver utilities. Its standalone

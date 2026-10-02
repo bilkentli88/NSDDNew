@@ -636,8 +636,9 @@ def main() -> None:
         "--mode",
         choices=("paper", "manuscript", "extended"),
         default="paper",
-        help=("paper: historical short configuration; manuscript: declared noise-sweep "
-              "schedule with short oscillator study; extended: longer schedules throughout"),
+        help=("paper: archived article configuration (180 pretraining iterations, 35/70 rollout epochs); "
+              "manuscript: legacy option for a longer noise sweep (260, 45/90), "
+              "not the archived article configuration; extended: longer schedules throughout"),
     )
     args = parser.parse_args()
     quick = args.mode == "paper"
